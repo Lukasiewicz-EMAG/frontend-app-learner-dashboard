@@ -56,7 +56,7 @@ export const CertificateBanner = ({ cardId }) => {
     if (isAudit) {
       return (
         <Banner>
-          {formatMessage(messages.passingGrade, { minPassingGrade })}
+        {minPassingGrade > 1 ? formatMessage(messages.passingGrade, { minPassingGrade }) : null}
         </Banner>
       );
     }
@@ -71,7 +71,7 @@ export const CertificateBanner = ({ cardId }) => {
     }
     return (
       <Banner variant="warning">
-        {formatMessage(messages.certMinGrade, { minPassingGrade })}
+      {minPassingGrade > 1 ? formatMessage(messages.certMinGrade, { minPassingGrade }) : null}
       </Banner>
     );
   }
