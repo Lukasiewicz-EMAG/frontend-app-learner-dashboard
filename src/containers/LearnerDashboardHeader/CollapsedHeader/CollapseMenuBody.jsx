@@ -75,6 +75,13 @@ export const CollapseMenuBody = ({ isOpen }) => {
           >
             {formatMessage(messages.account)}
           </Button>
+          <Button
+            as="a"
+            href={`${getConfig().LMS_BASE_URL}/demo/`}
+            variant="inverse-primary"
+          >
+            {formatMessage(messages.telemetry)}
+          </Button>
           {getConfig().ORDER_HISTORY_URL && (
             <Button
               as="a"

@@ -58,6 +58,9 @@ export const AuthenticatedUserDropdown = () => {
           <Dropdown.Item href={getConfig().ACCOUNT_SETTINGS_URL}>
             {formatMessage(messages.account)}
           </Dropdown.Item>
+          <Dropdown.Item href={`${getConfig().LMS_BASE_URL}/demo/`}>
+            {formatMessage(messages.telemetry)}
+          </Dropdown.Item>
           {getConfig().ORDER_HISTORY_URL && (
             <Dropdown.Item href={getConfig().ORDER_HISTORY_URL}>
               {formatMessage(messages.orderHistory)}

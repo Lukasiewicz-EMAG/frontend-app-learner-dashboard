@@ -26,6 +26,11 @@ const messages = defineMessages({
     defaultMessage: 'Profile',
     description: 'The text for the user menu Profile navigation link.',
   },
+  telemetry: {
+    id: 'learnerVariantDashboard.menu.telemetry.label',
+    defaultMessage: 'Telemetry',
+    description: 'Telemetry',
+  },
   viewPrograms: {
     id: 'learnerVariantDashboard.menu.viewPrograms.label',
     defaultMessage: 'View Programs',
