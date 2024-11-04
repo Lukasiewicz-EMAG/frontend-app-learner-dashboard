@@ -58,9 +58,12 @@ export const AuthenticatedUserDropdown = () => {
           <Dropdown.Item href={getConfig().ACCOUNT_SETTINGS_URL}>
             {formatMessage(messages.account)}
           </Dropdown.Item>
-          <Dropdown.Item href={`${getConfig().LMS_BASE_URL}/demo/`}>
-            {formatMessage(messages.telemetry)}
-          </Dropdown.Item>
+          {authenticatedUser?.administrator && (<Dropdown.Item href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'demo')}`}>
+            {formatMessage(messages.telemetryAdmin)}
+          </Dropdown.Item>)}
+          {authenticatedUser?.administrator === false && (<Dropdown.Item href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'demo')}details?page=admin_inf&view=tasks`}>
+            {formatMessage(messages.telemetryUser)}
+          </Dropdown.Item>)}
           {getConfig().ORDER_HISTORY_URL && (
             <Dropdown.Item href={getConfig().ORDER_HISTORY_URL}>
               {formatMessage(messages.orderHistory)}
