@@ -75,13 +75,20 @@ export const CollapseMenuBody = ({ isOpen }) => {
           >
             {formatMessage(messages.account)}
           </Button>
-          <Button
+          {authenticatedUser?.administrator && (<Button
             as="a"
-            href={`${getConfig().LMS_BASE_URL}/demo/`}
+            href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'demo')}`}
             variant="inverse-primary"
           >
-            {formatMessage(messages.telemetry)}
-          </Button>
+            {formatMessage(messages.telemetryAdmin)}
+          </Button>)}
+          {authenticatedUser?.administrator === false && (<Button
+            as="a"
+            href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'demo')}details?page=admin_inf&view=tasks`}
+            variant="inverse-primary"
+          >
+            {formatMessage(messages.telemetryUser)}
+          </Button>)}
           {getConfig().ORDER_HISTORY_URL && (
             <Button
               as="a"
