@@ -40,3 +40,75 @@
     margin: map-get($spacers, 2) 0;
   }
 }
+
+.find-courses, .university-profile {
+  background-color: #f4f7fd;
+}
+
+.filter-block>a {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #374151;
+  font-weight: 700;
+  border: #aeacac 1px solid;
+}
+
+.filter-block>a span {
+  margin: 0 15px;
+  padding: 0 3px;
+  display: none;
+}
+
+.filter-block>a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
+  color: black;
+}
+
+.saerch-bar-discover .discover-search .wrapper-search-context .wrapper-search-input .button-holder button {
+  padding: 6px 30px;
+  background: #2E6CD3;
+ 
+}
+
+
+.courses-container .courses .course .course-info .course-code {
+  display: none;
+  line-height: 23.68px;
+  padding: 0 15px;
+}
+
+.courses-container .courses .course .course-info .course-organization {
+  display: none;
+  line-height: 16.28px;
+  padding: 10px 15px 2px 15px;
+}
+
+.courses-container .courses .courses-listing li .course .course-info .course-date {
+  border-top: 1px solid #ECF0F4;
+  padding: 10px 20px;
+  margin: 0 -20px;
+  color: #6B7280;
+  font-size: 14px;
+  line-height: 20px;
+  display: none;
+}
+
+.courses-container .courses .courses-listing li .course .course-info .course-title {
+  color: #292C2E;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  height: auto;
+  min-height: 44px; 
+  padding: 0;
+  margin: 0 0 5px;
+  white-space: unset;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  display: -webkit-box !important; 
+  -webkit-box-orient: vertical;
+}
