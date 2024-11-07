@@ -84,7 +84,7 @@ export const CollapseMenuBody = ({ isOpen }) => {
           </Button>)}
           {authenticatedUser?.administrator === false && (<Button
             as="a"
-            href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'demo')}details?page=admin_inf&view=tasks`}
+            href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'demo')}?page=inf`}
             variant="inverse-primary"
           >
             {formatMessage(messages.telemetryUser)}
