@@ -30,8 +30,6 @@ export const DashboardLayout = ({ children, sidebar: Sidebar }) => {
     setSidebarShowing,
   } = hooks.useDashboardLayoutData();
 
-  console.log(isCollapsed, sidebarShowing, setSidebarShowing);
-
   const courseListColumnProps = sidebarShowing
     ? columnConfig.courseList.withSidebar
     : columnConfig.courseList.noSidebar;

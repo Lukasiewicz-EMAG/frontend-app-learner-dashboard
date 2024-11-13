@@ -72,3 +72,21 @@ $c-bg-color: #f4f7fd;
     overflow: hidden;
   }
 }
+
+// compass
+
+.btn-primary {
+  background-color: $c-blue !important;
+  border-color: $c-blue !important;
+
+  &:hover {
+    background-color: darken($c-blue, 10%) !important;
+    border-color: darken($c-blue, 10%) !important;
+  }
+
+  &:focus {
+    &::before {
+      border: 1px solid $c-blue;
+    }
+  }
+}
