@@ -75,6 +75,13 @@ export const CollapseMenuBody = ({ isOpen }) => {
           >
             {formatMessage(messages.account)}
           </Button>
+          <Button
+            as="a"
+            href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'demo')}?page=inf`}
+            variant="inverse-primary"
+          >
+            {formatMessage(messages.telemetryUser)}
+          </Button>
           {authenticatedUser?.administrator && (<Button
             as="a"
             href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'demo')}`}
@@ -82,14 +89,7 @@ export const CollapseMenuBody = ({ isOpen }) => {
           >
             {formatMessage(messages.telemetryAdmin)}
           </Button>)}
-          {authenticatedUser?.administrator === false && (<Button
-            as="a"
-            href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'demo')}?page=inf`}
-            variant="inverse-primary"
-          >
-            {formatMessage(messages.telemetryUser)}
-          </Button>)}
-          {getConfig().ORDER_HISTORY_URL && (
+          {/* {getConfig().ORDER_HISTORY_URL && (
             <Button
               as="a"
               variant="inverse-primary"
@@ -97,7 +97,7 @@ export const CollapseMenuBody = ({ isOpen }) => {
             >
               {formatMessage(messages.orderHistory)}
             </Button>
-          )}
+          )} */}
           <Button
             as="a"
             href={getConfig().LOGOUT_URL}
