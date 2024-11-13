@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Card } from '@openedx/paragon';
 
 import { useIsCollapsed } from './hooks';
-import CourseCardBanners from './components/CourseCardBanners';
 import CourseCardImage from './components/CourseCardImage';
 import CourseCardMenu from './components/CourseCardMenu';
 import CourseCardActions from './components/CourseCardActions';
@@ -20,7 +19,7 @@ export const CourseCard = ({
   const orientation = isCollapsed ? 'vertical' : 'horizontal';
   return (
     <div className="mb-4.5 course-card" id={cardId} data-testid="CourseCard">
-      <Card orientation={orientation}>
+      <Card orientation={orientation} className="overflow-hidden">
         <div className="d-flex flex-column w-100">
           <div {...(!isCollapsed && { className: 'd-flex' })}>
             <CourseCardImage cardId={cardId} orientation="horizontal" />
@@ -37,7 +36,6 @@ export const CourseCard = ({
               </Card.Footer>
             </Card.Body>
           </div>
-          <CourseCardBanners cardId={cardId} />
         </div>
       </Card>
     </div>
