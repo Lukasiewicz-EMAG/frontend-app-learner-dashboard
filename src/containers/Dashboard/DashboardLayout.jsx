@@ -30,6 +30,8 @@ export const DashboardLayout = ({ children, sidebar: Sidebar }) => {
     setSidebarShowing,
   } = hooks.useDashboardLayoutData();
 
+  console.log(isCollapsed, sidebarShowing, setSidebarShowing);
+
   const courseListColumnProps = sidebarShowing
     ? columnConfig.courseList.withSidebar
     : columnConfig.courseList.noSidebar;
@@ -40,10 +42,12 @@ export const DashboardLayout = ({ children, sidebar: Sidebar }) => {
         <Col {...courseListColumnProps} className="course-list-column">
           {children}
         </Col>
-        <Col {...columnConfig.sidebar} className="sidebar-column">
-          {!isCollapsed && (<h2 className="course-list-title">&nbsp;</h2>)}
-          <Sidebar setSidebarShowing={setSidebarShowing} />
-        </Col>
+        {sidebarShowing && (
+          <Col {...columnConfig.sidebar} className="sidebar-column">
+            {!isCollapsed && (<h2 className="course-list-title">&nbsp;</h2>)}
+            <Sidebar setSidebarShowing={setSidebarShowing} />
+          </Col>
+        )}
       </Row>
       <Row>
         <Col>
