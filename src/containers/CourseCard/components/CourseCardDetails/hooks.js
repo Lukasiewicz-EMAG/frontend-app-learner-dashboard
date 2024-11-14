@@ -37,6 +37,7 @@ export const useAccessMessage = ({ cardId }) => {
 };
 
 export const useCardDetailsData = ({ cardId }) => {
+  console.log('cardProviderData', reduxHooks.useCardProviderData(cardId));
   const { formatMessage } = useIntl();
   const providerName = reduxHooks.useCardProviderData(cardId).name;
   const { courseNumber } = reduxHooks.useCardCourseData(cardId);

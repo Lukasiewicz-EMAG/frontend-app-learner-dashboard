@@ -15,6 +15,7 @@ $input-focus-box-shadow: $input-box-shadow; // hack to get upgrade to paragon 4.
 $c-blue: #2E6CD3;
 $c-white: #fff;
 $c-bg-color: #f4f7fd;
+$c-border-radius: 10px;
 
 .text-ellipsis {
   overflow: hidden;
@@ -75,18 +76,40 @@ $c-bg-color: #f4f7fd;
 
 // compass
 
-.btn-primary {
-  background-color: $c-blue !important;
-  border-color: $c-blue !important;
+.btn {
+  border-radius: $c-border-radius !important;
+  transition: background-color $c-transition-time $c-transition-type;
 
-  &:hover {
-    background-color: darken($c-blue, 10%) !important;
-    border-color: darken($c-blue, 10%) !important;
+  &.btn-primary {
+    background-color: $c-blue !important;
+    border-color: $c-blue !important;
+
+    &:hover {
+      background-color: darken($c-blue, 10%) !important;
+      border-color: darken($c-blue, 10%) !important;
+    }
+
+    &:focus {
+      &::before {
+        border: 1px solid $c-blue;
+      }
+    }
   }
 
-  &:focus {
-    &::before {
+  &.btn-outline-primary {
+    background-color: $c-white;
+    border: 1px solid $c-blue;
+    color: $c-blue;
+
+    &:hover {
       border: 1px solid $c-blue;
+      color: $c-blue;
+    }
+
+    &:focus {
+      &::before {
+        border: 2px solid $c-blue;
+      }
     }
   }
 }
