@@ -47,5 +47,9 @@
       box-shadow: inset 0 0 0 2px $c-blue !important;
       color: $c-blue !important
     }
+
+    &:hover:focus {
+      color: $c-white !important;
+    }
   }
 }
