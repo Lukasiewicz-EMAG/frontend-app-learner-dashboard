@@ -42,6 +42,7 @@ export const useCardDetailsData = ({ cardId }) => {
   console.log('useCardCourseData', reduxHooks.useCardCourseData(cardId));
   console.log('useCardCourseRunData', reduxHooks.useCardCourseRunData(cardId));
   console.log('useCardEntitlementData', reduxHooks.useCardEntitlementData(cardId));
+  console.log('reduxHooks', reduxHooks);
   console.log('----------');
 
   const { formatMessage } = useIntl();
