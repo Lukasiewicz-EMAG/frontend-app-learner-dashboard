@@ -1,0 +1,37 @@
+.btn {
+  border-radius: $c-border-radius !important;
+  transition: background-color $c-transition-time $c-transition-type;
+
+  &.btn-primary {
+    background-color: $c-blue !important;
+    border-color: $c-blue !important;
+
+    &:hover {
+      background-color: darken($c-blue, 10%) !important;
+      border-color: darken($c-blue, 10%) !important;
+    }
+
+    &:focus {
+      &::before {
+        border: 1px solid $c-blue;
+      }
+    }
+  }
+
+  &.btn-outline-primary {
+    background-color: $c-white;
+    border: 1px solid $c-blue;
+    color: $c-blue;
+
+    &:hover {
+      border: 1px solid $c-blue;
+      color: $c-blue;
+    }
+
+    &:focus {
+      &::before {
+        border: 2px solid $c-blue;
+      }
+    }
+  }
+}

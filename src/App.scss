@@ -3,6 +3,8 @@
 @import "~@edx/brand/paragon/variables";
 @import "~@openedx/paragon/scss/core/core";
 @import "~@edx/brand/paragon/overrides";
+@import "assets/styles/compass-variables";
+@import "assets/styles/compass";
 
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
@@ -10,12 +12,6 @@ $fa-font-path: "~font-awesome/fonts";
 $input-focus-box-shadow: $input-box-shadow; // hack to get upgrade to paragon 4.0.0 to work
 
 @import "~@edx/frontend-component-footer/dist/_footer";
-
-// compass variables
-$c-blue: #2E6CD3;
-$c-white: #fff;
-$c-bg-color: #f4f7fd;
-$c-border-radius: 10px;
 
 .text-ellipsis {
   overflow: hidden;
@@ -71,45 +67,5 @@ $c-border-radius: 10px;
   }
   .confirm-modal .pgn__modal-body {
     overflow: hidden;
-  }
-}
-
-// compass
-
-.btn {
-  border-radius: $c-border-radius !important;
-  transition: background-color $c-transition-time $c-transition-type;
-
-  &.btn-primary {
-    background-color: $c-blue !important;
-    border-color: $c-blue !important;
-
-    &:hover {
-      background-color: darken($c-blue, 10%) !important;
-      border-color: darken($c-blue, 10%) !important;
-    }
-
-    &:focus {
-      &::before {
-        border: 1px solid $c-blue;
-      }
-    }
-  }
-
-  &.btn-outline-primary {
-    background-color: $c-white;
-    border: 1px solid $c-blue;
-    color: $c-blue;
-
-    &:hover {
-      border: 1px solid $c-blue;
-      color: $c-blue;
-    }
-
-    &:focus {
-      &::before {
-        border: 2px solid $c-blue;
-      }
-    }
   }
 }
