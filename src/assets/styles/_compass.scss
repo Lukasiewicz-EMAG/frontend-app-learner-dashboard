@@ -35,3 +35,17 @@
     }
   }
 }
+
+.btn-icon {
+  &.btn-icon-primary {
+    &:hover,
+    &:active {
+      background-color: $c-blue !important;
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 0 2px $c-blue !important;
+      color: $c-blue !important
+    }
+  }
+}
