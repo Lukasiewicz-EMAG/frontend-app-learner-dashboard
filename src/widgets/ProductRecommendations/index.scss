@@ -1,3 +1,5 @@
+@import "@openedx/paragon/scss/core/core";
+
 $horizontal-card-gap: 20px;
 $vertical-card-gap: 24px;
 
@@ -31,7 +33,7 @@ $vertical-card-gap: 24px;
 
   .product-card-subtitle {
     font: {
-      size: 0.875rem; 
+      size: 0.875rem;
     }
 
     line-height: 24px;
