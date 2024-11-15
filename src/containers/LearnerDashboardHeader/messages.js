@@ -33,8 +33,8 @@ const messages = defineMessages({
   },
   telemetryAdmin: {
     id: 'learnerVariantDashboard.menu.telemetryAdmin.label',
-    defaultMessage: 'Course Statistics Overview',
-    description: 'Course Statistics Overview',
+    defaultMessage: 'Summary of courses for teache',
+    description: 'Summary of courses for teache',
   },
   viewPrograms: {
     id: 'learnerVariantDashboard.menu.viewPrograms.label',
