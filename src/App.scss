@@ -1,7 +1,7 @@
 // frontend-app-*/src/index.scss
 @import "~@edx/brand/paragon/fonts";
 @import "~@edx/brand/paragon/variables";
-@import "~@openedx/paragon/scss/core/core";
+@import "assets/styles/paragon-imports";
 @import "~@edx/brand/paragon/overrides";
 @import "assets/styles/compass-variables";
 @import "assets/styles/compass";
@@ -9,7 +9,7 @@
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 
-$input-focus-box-shadow: $input-box-shadow; // hack to get upgrade to paragon 4.0.0 to work
+$input-focus-box-shadow: inset 0 1px 1px rgba($black, .075) !default;
 
 @import "~@edx/frontend-component-footer/dist/_footer";
 
