@@ -1,3 +1,5 @@
+@import "../../assets/styles/compass-variables";
+
 .dropdown-menu-collapse {
   width: 100vw;
   position: absolute;
@@ -6,15 +8,20 @@
 
 .learner-variant-header {
   a {
-    // needed to make the link not resize the header
-    border-bottom: 2px solid transparent;
-  }
-  .course-link {
-    border-bottom: 2px solid !important;
+    color: $c-main-gray;
+    border-bottom: 2px solid transparent !important;
   }
 
-  .course-link:hover {
-    border-bottom: inherit !important;
+  .course-link {
+    font-weight: 700;
+
+    &:hover {
+      border-bottom: 2px solid $c-blue !important;
+    }
+  }
+
+  .btn {
+    border-radius: 0 !important;
   }
 }
 
