@@ -75,7 +75,7 @@ export const CollapseMenuBody = ({ isOpen }) => {
           >
             {formatMessage(messages.account)}
           </Button>
-          <Button
+          {/* <Button
             as="a"
             href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'demo')}?page=inf`}
             variant="inverse-primary"
@@ -88,7 +88,7 @@ export const CollapseMenuBody = ({ isOpen }) => {
             variant="inverse-primary"
           >
             {formatMessage(messages.telemetryAdmin)}
-          </Button>)}
+          </Button>)} */}
           {/* {getConfig().ORDER_HISTORY_URL && (
             <Button
               as="a"
