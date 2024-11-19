@@ -43,3 +43,10 @@
   // copy from legacy dashboard
   height: 40px;
 }
+
+.header-container {
+  max-width: 1090px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
