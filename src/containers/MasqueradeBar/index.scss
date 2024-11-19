@@ -30,6 +30,10 @@
     padding: map-get($spacers, 2) map-get($spacers, 3);
     font-size: $font-size-base;
   }
+
+  .pgn__form-control-floating-label {
+    color: $dark;
+  }
 }
 
 @include media-breakpoint-down(md) {
