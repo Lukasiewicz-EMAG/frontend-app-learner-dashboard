@@ -11,7 +11,7 @@ $fa-font-path: "~font-awesome/fonts";
 
 $input-focus-box-shadow: inset 0 1px 1px rgba($black, .075) !default;
 
-// @import "~@edx/frontend-component-footer/dist/_footer";
+@import "~@edx/frontend-component-footer/dist/_footer";
 
 .text-ellipsis {
   overflow: hidden;
