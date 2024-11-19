@@ -1,4 +1,3 @@
-@import "assets/styles/variable-overrides";
 @import "~@edx/brand/paragon/fonts";
 @import "~@edx/brand/paragon/variables";
 @import "assets/styles/paragon-imports";
@@ -6,12 +5,13 @@
 @import "assets/styles/compass-variables";
 @import "assets/styles/compass";
 
+@import "assets/styles/variable-overrides";
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 
 $input-focus-box-shadow: inset 0 1px 1px rgba($black, .075) !default;
 
-@import "~@edx/frontend-component-footer/dist/_footer";
+// @import "~@edx/frontend-component-footer/dist/_footer";
 
 .text-ellipsis {
   overflow: hidden;
