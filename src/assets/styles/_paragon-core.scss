@@ -1,0 +1,35 @@
+// test
+@import "variable-overrides";
+
+@import "~@openedx/paragon/scss/core/functions";
+@import "~@openedx/paragon/scss/core/variables";
+
+// test
+@import "variable-overrides";
+
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+
+// test
+@import "variable-overrides";
+
+@import "~@openedx/paragon/scss/core/typography";
+@import "~@openedx/paragon/scss/core/grid";
+
+@import "~react-loading-skeleton/dist/skeleton.css";
+@import "~bootstrap/scss/transitions";
+
+// test
+@import "variable-overrides";
+
+@import "~@openedx/paragon/scss/core/utilities";
+
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/print";
+
+// test
+@import "variable-overrides";
+
+@import "~@openedx/paragon/src/index";
