@@ -35,7 +35,7 @@ export const ExpandedHeader = () => {
             as="a"
             href="/"
             variant="inverse-primary"
-            className="p-4 course-link"
+            className="course-link"
           >
             {formatMessage(messages.course)}
           </Button>
