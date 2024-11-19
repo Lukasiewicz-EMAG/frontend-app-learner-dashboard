@@ -4,6 +4,8 @@
   display: flex;
   align-items: flex-start;
   padding: map-get($spacers, 3);
+  max-width: $c-max-width;
+  margin: 0 auto;
 
   .masquerade-form-label {
     padding: map-get($spacers, 2) map-get($spacers, 3);

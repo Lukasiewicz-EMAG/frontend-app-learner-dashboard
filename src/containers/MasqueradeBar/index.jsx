@@ -36,7 +36,7 @@ export const MasqueradeBar = () => {
   if (!canMasquerade) { return null; }
 
   return (
-    <div className="w-100 shadow-sm px-2">
+    <div className="w-100 shadow-sm bg-primary text-white">
       <Form className="masquerade-bar w-100">
         {isMasquerading ? (
           <>
