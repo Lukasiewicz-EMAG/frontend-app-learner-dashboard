@@ -53,3 +53,20 @@
     }
   }
 }
+
+.top-decoration {
+  position: relative;
+  padding-top: $c-top-decoration-height;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: $c-top-decoration-height;
+    width: 100%;
+    background-color: $c-top-decoration-bg-color;
+    border-top: 1px solid $c-top-decoration-top-border-color;
+    border-bottom: 1px solid $c-top-decoration-bottom-border-color;
+    margin-top: 1px;
+  }
+}

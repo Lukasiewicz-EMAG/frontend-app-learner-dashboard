@@ -96,7 +96,7 @@ export const App = () => {
       <div>
         <AppWrapper>
           <LearnerDashboardHeader />
-          <main>
+          <main className="top-decoration">
             {hasNetworkFailure
               ? (
                 <Alert variant="danger">
