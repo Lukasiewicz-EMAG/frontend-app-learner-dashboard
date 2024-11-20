@@ -34,7 +34,7 @@
     border-radius: $c-border-radius;
 
     &:hover {
-      background-color: darken($c-auth-user-dropdown-bg-color, 3%);
+      background-color: darken($c-auth-user-dropdown-bg-color, 10%);
       border: 1px solid $c-blue;
       color: $c-blue;
     }
