@@ -28,14 +28,14 @@ export const ExpandedHeader = () => {
   return (
     <header className="shadow-sm learner-variant-header">
       <div class="header-container">
-        <div className="flex-grow-1 d-flex align-items-center">
+        <div className="flex-grow-1 d-flex align-items-center h-100">
           <BrandLogo />
 
           <Button
             as="a"
             href="/"
             variant="inverse-primary"
-            className="course-link"
+            className="course-link h-100"
           >
             {formatMessage(messages.course)}
           </Button>
@@ -51,8 +51,8 @@ export const ExpandedHeader = () => {
             as="a"
             href={urls.baseAppUrl(courseSearchUrl)}
             variant="inverse-primary"
-            className="p-4"
             onClick={exploreCoursesClick}
+            className="h-100"
           >
             {formatMessage(messages.discoverNew)}
           </Button>
@@ -61,7 +61,7 @@ export const ExpandedHeader = () => {
             as="a"
             href={getConfig().SUPPORT_URL}
             variant="inverse-primary"
-            className="p-4"
+            className="h-100"
           >
             {formatMessage(messages.help)}
           </Button>

@@ -10,18 +10,34 @@
   a {
     color: $c-main-gray;
     border-bottom: 2px solid transparent !important;
+
+    &.btn {
+      &:hover {
+        border-bottom: 2px solid $c-blue !important;
+        background-color: transparent !important;
+      }
+    }
   }
 
   .course-link {
     font-weight: 700;
-
-    &:hover {
-      border-bottom: 2px solid $c-blue !important;
-    }
   }
 
-  .btn {
+  .btn:not(.btn-avatar) {
     border-radius: 0 !important;
+  }
+
+  .btn-avatar {
+    background-color: $c-auth-user-dropdown-bg-color;
+    color: $c-blue;
+    border: 1px solid $c-blue;
+    border-radius: $c-border-radius;
+
+    &:hover {
+      background-color: darken($c-auth-user-dropdown-bg-color, 3%);
+      border: 1px solid $c-blue;
+      color: $c-blue;
+    }
   }
 }
 
