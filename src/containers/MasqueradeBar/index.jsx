@@ -63,8 +63,9 @@ export const MasqueradeBar = () => {
                 value={masqueradeInput}
                 onChange={handleMasqueradeInputChange}
                 floatingLabel={formatMessage(messages.StudentNameInput)}
-                aria-labelledby="masquerade-form-label"
-                id="masquerade-form-input"
+                aria-labelledby="masquerade-form-label-test"
+                id="masquerade-form-input-test"
+                controlId="test"
               />
               {isMasqueradingFailed && (
                 <FormControlFeedback type="invalid" hasIcon={false}>
