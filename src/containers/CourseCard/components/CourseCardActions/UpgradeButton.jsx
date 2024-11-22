@@ -33,6 +33,7 @@ export const UpgradeButton = ({ cardId }) => {
       iconBefore={Locked}
       variant="outline-primary"
       disabled={disableUpgradeCourse}
+      className="mr-2 mr-sm-0"
       {...!disableUpgradeCourse && enabledProps}
     >
       {formatMessage(messages.upgrade)}

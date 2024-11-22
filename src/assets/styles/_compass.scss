@@ -69,3 +69,21 @@
     border-bottom: 1px solid $c-top-decoration-bottom-border-color;
   }
 }
+
+@media (min-width: 768px) {
+  .pgn__card {
+    .pgn__card-wrapper-image-cap {
+      &.horizontal {
+        max-width: $c-card-image-horizontal-max-width !important;
+      }
+    }
+  }
+}
+
+.pgn__card-wrapper-image-cap {
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
