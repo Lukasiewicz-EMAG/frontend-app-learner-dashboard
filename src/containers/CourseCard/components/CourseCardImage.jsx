@@ -15,7 +15,7 @@ const { courseImageClicked } = track.course;
 
 export const CourseCardImage = ({ cardId, orientation }) => {
   const { formatMessage } = useIntl();
-  const { bannerImgSrc } = reduxHooks.useCardCourseData(cardId);
+  const { bannerImgSrc, courseName } = reduxHooks.useCardCourseData(cardId);
   const { homeUrl } = reduxHooks.useCardCourseRunData(cardId);
   const { isVerified } = reduxHooks.useCardEnrollmentData(cardId);
   const { disableCourseTitle } = useActionDisabledState(cardId);
@@ -26,7 +26,7 @@ export const CourseCardImage = ({ cardId, orientation }) => {
       <img
         className="pgn__card-image-cap show"
         src={bannerImgSrc}
-        alt={formatMessage(messages.bannerAlt)}
+        alt={`${formatMessage(messages.bannerAlt, { courseName })}`}
       />
       {
         isVerified && (
