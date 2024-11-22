@@ -80,10 +80,22 @@
   }
 }
 
-.pgn__card-wrapper-image-cap {
-  img {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
+@media (max-width: 767px) {
+  .pgn__card {
+    .pgn__card-wrapper-image-cap {
+      &.horizontal {
+        max-height: $c-card-image-horizontal-max-width !important;
+      }
+    }
+  }
+}
+
+.pgn__card {
+  .pgn__card-wrapper-image-cap {
+    img {
+      object-fit: cover !important;
+      object-position: center !important;
+      width: 100% !important;
+    }
   }
 }
