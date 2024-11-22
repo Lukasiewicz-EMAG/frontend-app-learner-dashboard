@@ -4,7 +4,7 @@ const messages = defineMessages({
   bannerAlt: {
     id: 'learner-dash.courseCard.bannerAlt',
     description: 'Course card banner alt-text',
-    defaultMessage: 'Course thumbnail',
+    defaultMessage: 'Image of the course {courseName}',
   },
   verifiedBanner: {
     id: 'learner-dash.courseCard.verifiedBanner',
