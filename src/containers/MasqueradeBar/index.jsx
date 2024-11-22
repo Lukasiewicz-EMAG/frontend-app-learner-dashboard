@@ -54,7 +54,7 @@ export const MasqueradeBar = () => {
           </>
         ) : (
           <>
-            <FormLabel inline id="masquerade-form-label" className="masquerade-form-label">
+            <FormLabel inline id="masquerade-form-label" for="masquerade-form-input" className="masquerade-form-label">
               <Icon src={PersonSearch} />
               {formatMessage(messages.ViewAs)}
             </FormLabel>
@@ -64,6 +64,7 @@ export const MasqueradeBar = () => {
                 onChange={handleMasqueradeInputChange}
                 floatingLabel={formatMessage(messages.StudentNameInput)}
                 aria-labelledby="masquerade-form-label"
+                id="masquerade-form-input"
               />
               {isMasqueradingFailed && (
                 <FormControlFeedback type="invalid" hasIcon={false}>
