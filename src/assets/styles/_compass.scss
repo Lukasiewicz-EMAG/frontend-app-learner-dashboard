@@ -35,7 +35,7 @@
     }
   }
 
-  .btn-inverse-primary {
+  &.btn-inverse-primary {
     &:focus {
       &:before {
         border: none !important;
