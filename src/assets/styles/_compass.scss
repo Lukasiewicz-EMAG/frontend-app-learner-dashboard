@@ -34,6 +34,25 @@
       }
     }
   }
+
+  .btn-inverse-primary {
+    &:focus {
+      &:before {
+        border: none !important;
+        border-radius: unset;
+        bottom: unset;
+        content: "";
+        left: unset;
+        position: absolute;
+        right: unset;
+        top: unset;
+      }
+    }
+
+    &:focus-visible {
+      outline: black auto 1px;
+    }
+  }
 }
 
 .btn-icon {
