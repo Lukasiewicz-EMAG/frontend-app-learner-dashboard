@@ -18,8 +18,8 @@ export const AuthenticatedUserDropdown = () => {
     authenticatedUser && (
       <Dropdown className="user-dropdown pr4">
         <Dropdown.Toggle
-          as={AvatarButton}
-          src={authenticatedUser.profileImage}
+          // as={AvatarButton}
+          // src={authenticatedUser.profileImage}
           id="user"
           variant="light"
         >
