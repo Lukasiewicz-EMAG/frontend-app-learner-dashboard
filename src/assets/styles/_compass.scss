@@ -53,6 +53,17 @@
       outline: black auto 1px;
     }
   }
+
+  &.btn-light {
+    &:not(:disabled),
+    &:not(.disabled) {
+      &:active {
+        background-color: darken($c-auth-user-dropdown-bg-color, 12%);
+        border: 1px solid $c-blue;
+        color: $c-blue;
+      }
+    }
+  }
 }
 
 .btn-icon {
