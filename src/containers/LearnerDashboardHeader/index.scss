@@ -23,11 +23,11 @@
     font-weight: 700;
   }
 
-  .btn:not(.btn-avatar) {
+  .btn:not(.dropdown-toggle) {
     border-radius: 0 !important;
   }
 
-  .btn-avatar {
+  .dropdown-toggle {
     background-color: $c-auth-user-dropdown-bg-color;
     color: $c-blue;
     border: 1px solid $c-blue;
