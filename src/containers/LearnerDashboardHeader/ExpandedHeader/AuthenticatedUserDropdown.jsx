@@ -57,17 +57,18 @@ export const AuthenticatedUserDropdown = () => {
           <Dropdown.Item href={getConfig().ACCOUNT_SETTINGS_URL}>
             {formatMessage(messages.account)}
           </Dropdown.Item>
-          <Dropdown.Item href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'dashboard')}?page=inf`}>
-            {formatMessage(messages.telemetryUser)}
-          </Dropdown.Item>
-          {authenticatedUser?.administrator && (<Dropdown.Item href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'dashboard')}`}>
-            {formatMessage(messages.telemetryAdmin)}
-          </Dropdown.Item>)}
-          {/* {getConfig().ORDER_HISTORY_URL && (
-            <Dropdown.Item href={getConfig().ORDER_HISTORY_URL}>
-              {formatMessage(messages.orderHistory)}
+          {getConfig().SHOW_TELEMETRY_LINKS == 'true' && (
+            <>
+            <Dropdown.Item href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'dashboard')}?page=inf`}>
+              {formatMessage(messages.telemetryUser)}
             </Dropdown.Item>
-          )} */}
+            {authenticatedUser?.administrator && (
+              <Dropdown.Item href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'dashboard')}`}>
+                {formatMessage(messages.telemetryAdmin)}
+              </Dropdown.Item>)
+            }
+            </>
+          )}
           <Dropdown.Divider />
           <Dropdown.Item href={getConfig().LOGOUT_URL}>
             {formatMessage(messages.signOut)}
