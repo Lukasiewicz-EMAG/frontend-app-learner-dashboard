@@ -11,9 +11,13 @@ div[data-testid="browser-router"] {
 
 div[data-testid="browser-router"] {
   &>div {
-    display: flex;
-    flex-direction: column;
     height: 100%;
+
+    &>div {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
   }
 }
 
