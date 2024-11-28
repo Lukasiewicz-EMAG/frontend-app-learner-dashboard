@@ -77,14 +77,14 @@ export const CollapseMenuBody = ({ isOpen }) => {
           </Button>
           {getConfig().SHOW_TELEMETRY_LINKS == 'true' && (<Button
               as="a"
-              href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'dashboard')}?page=inf`}
+              href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'dashboard')}?page=student&view=general`}
               variant="inverse-primary"
             >
             {formatMessage(messages.telemetryUser)} 
           </Button>)}
           {authenticatedUser?.administrator && getConfig().SHOW_TELEMETRY_LINKS == 'true' && (<Button
               as="a"
-              href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'dashboard')}`}
+              href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'dashboard')}?page=admin&view=general`}
               variant="inverse-primary"
             >
             {formatMessage(messages.telemetryAdmin)}
