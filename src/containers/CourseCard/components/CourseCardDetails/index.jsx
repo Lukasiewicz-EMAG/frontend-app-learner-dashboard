@@ -7,6 +7,8 @@ import useCardDetailsData from './hooks';
 import './index.scss';
 
 export const CourseCardDetails = ({ cardId }) => {
+  const data = useCardDetailsData({ cardId });
+  console.log('useCardDetailsData', data)
   const {
     providerName,
     accessMessage,
@@ -16,7 +18,8 @@ export const CourseCardDetails = ({ cardId }) => {
     openSessionModal,
     courseNumber,
     changeOrLeaveSessionMessage,
-  } = useCardDetailsData({ cardId });
+  } = data;
+  
 
   return (
     <span className="small" data-testid="CourseCardDetails">
