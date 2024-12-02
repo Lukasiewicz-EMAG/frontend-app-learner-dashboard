@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 import { Button } from '@openedx/paragon';
 
@@ -17,12 +18,32 @@ export const CourseCardDetails = ({ cardId }) => {
     openSessionModal,
     courseNumber,
     changeOrLeaveSessionMessage,
+    courseId
   } = data;
-  
+
+  const [courseOverview, setCourseOverview] = useState('');
+
+  useEffect(() => {
+    console.log('courseId', courseId)
+    if (courseId) {
+      const fetchCourseDetails = async () => {
+        try {
+          const url = `https://dev.cudzoziemiec.emag.lukasiewicz.local/api/courses/v1/courses/${courseId}`;
+          const response = await axios.get(url);
+          console.log('Course details:', response.data);
+          setCourseOverview(response.data.overview);
+        } catch (error) {
+          console.error('Error fetching course details:', error);
+        }
+      };
+
+      fetchCourseDetails();
+    }
+  }, [courseId]);
 
   return (
     <span className="small" data-testid="CourseCardDetails">
-      {providerName} • {courseNumber}
+      <span dangerouslySetInnerHTML={{ __html: courseOverview }} />
       {!(isEntitlement && !isFulfilled) && accessMessage && (
         ` • ${accessMessage}`
       )}
@@ -34,6 +55,7 @@ export const CourseCardDetails = ({ cardId }) => {
           </Button>
         </>
       ) : null}
+      
     </span>
   );
 };
