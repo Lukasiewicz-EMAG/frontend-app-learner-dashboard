@@ -8,7 +8,6 @@ import './index.scss';
 
 export const CourseCardDetails = ({ cardId }) => {
   const data = useCardDetailsData({ cardId });
-  console.log('useCardDetailsData', data)
   const {
     providerName,
     accessMessage,
