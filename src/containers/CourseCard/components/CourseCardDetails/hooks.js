@@ -48,7 +48,7 @@ export const useCardDetailsData = ({ cardId }) => {
   const { formatMessage } = useIntl();
   const providerName = reduxHooks.useCardProviderData(cardId).name;
   const { courseNumber } = reduxHooks.useCardCourseData(cardId);
-  const { courseId } = useCardCourseRunData(cardId)
+  const { courseId } = reduxHooks.useCardCourseRunData(cardId)
   const {
     isEntitlement,
     isFulfilled,
