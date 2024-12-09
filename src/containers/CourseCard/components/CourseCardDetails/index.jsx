@@ -37,7 +37,7 @@ export const CourseCardDetails = ({ cardId }) => {
           
           const response = await axios.get(url);
           console.log('Course details:', response.data);
-          setCourseOverview(response.data.overview);
+          setCourseOverview(response.data.short_description);
         } catch (error) {
           console.error('Error fetching course details:', error);
         }
