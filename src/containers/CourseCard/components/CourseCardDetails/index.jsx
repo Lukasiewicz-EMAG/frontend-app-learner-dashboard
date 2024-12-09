@@ -26,12 +26,14 @@ export const CourseCardDetails = ({ cardId }) => {
   const [courseOverview, setCourseOverview] = useState('');
 
   useEffect(() => {
-    console.log('CourseCardDetails', courseId)
+    console.log('CourseCardDetails useEffect courseId', courseId)
     if (courseId) {
       const fetchCourseDetails = async () => {
         try {
           const baseUrl = getConfig().LMS_BASE_URL;
+          console.log('baseUrl', baseUrl)
           const url = `${baseUrl}/api/courses/v1/courses/${courseId}`;
+          console.log('url', url)
           
           const response = await axios.get(url);
           console.log('Course details:', response.data);

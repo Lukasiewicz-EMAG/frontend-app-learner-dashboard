@@ -48,6 +48,7 @@ export const useCardDetailsData = ({ cardId }) => {
   const { formatMessage } = useIntl();
   const providerName = reduxHooks.useCardProviderData(cardId).name;
   const { courseNumber } = reduxHooks.useCardCourseData(cardId);
+  const { courseId } = reduxHooks.useCardCourseRunData(cardId);
   const {
     isEntitlement,
     isFulfilled,
@@ -64,6 +65,7 @@ export const useCardDetailsData = ({ cardId }) => {
     canChange,
     openSessionModal,
     courseNumber,
+    courseId,
     changeOrLeaveSessionMessage: formatMessage(messages.changeOrLeaveSessionButton),
   };
 };
