@@ -21,6 +21,7 @@ export const CourseCardDetails = ({ cardId }) => {
     changeOrLeaveSessionMessage,
     courseId
   } = data;
+  console.log('data', data)
 
   const [courseOverview, setCourseOverview] = useState('');
 
