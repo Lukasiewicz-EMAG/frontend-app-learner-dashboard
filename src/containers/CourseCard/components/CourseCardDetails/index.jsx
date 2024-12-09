@@ -25,6 +25,7 @@ export const CourseCardDetails = ({ cardId }) => {
   const [courseOverview, setCourseOverview] = useState('');
 
   useEffect(() => {
+    console.log('CourseCardDetails', courseId)
     if (courseId) {
       const fetchCourseDetails = async () => {
         try {
