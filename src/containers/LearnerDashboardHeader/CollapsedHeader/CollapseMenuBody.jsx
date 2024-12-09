@@ -75,14 +75,14 @@ export const CollapseMenuBody = ({ isOpen }) => {
           >
             {formatMessage(messages.account)}
           </Button>
-          {getConfig().SHOW_TELEMETRY_LINKS == 'true' && (<Button
+          {getConfig().SHOW_TELEMETRY_LINKS_STUDENT == 'true' && (<Button
               as="a"
               href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'dashboard')}?page=student&view=general`}
               variant="inverse-primary"
             >
             {formatMessage(messages.telemetryUser)} 
           </Button>)}
-          {authenticatedUser?.administrator && getConfig().SHOW_TELEMETRY_LINKS == 'true' && (<Button
+          {authenticatedUser?.administrator && getConfig().SHOW_TELEMETRY_LINKS_ADMIN == 'true' && (<Button
               as="a"
               href={`${getConfig().ACCOUNT_SETTINGS_URL.replace('account', 'dashboard')}?page=admin&view=general`}
               variant="inverse-primary"
