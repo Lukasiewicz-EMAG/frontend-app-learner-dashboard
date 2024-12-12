@@ -37,14 +37,6 @@ export const useAccessMessage = ({ cardId }) => {
 };
 
 export const useCardDetailsData = ({ cardId }) => {
-  console.log(`------${cardId}------`);
-  console.log('cardProviderData', reduxHooks.useCardProviderData(cardId));
-  console.log('useCardCourseData', reduxHooks.useCardCourseData(cardId));
-  console.log('useCardCourseRunData', reduxHooks.useCardCourseRunData(cardId));
-  console.log('useCardEntitlementData', reduxHooks.useCardEntitlementData(cardId));
-  console.log('reduxHooks', reduxHooks);
-  console.log('----------');
-
   const { formatMessage } = useIntl();
   const providerName = reduxHooks.useCardProviderData(cardId).name;
   const { courseNumber } = reduxHooks.useCardCourseData(cardId);

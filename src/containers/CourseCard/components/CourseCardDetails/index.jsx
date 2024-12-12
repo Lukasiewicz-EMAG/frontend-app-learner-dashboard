@@ -21,25 +21,19 @@ export const CourseCardDetails = ({ cardId }) => {
     changeOrLeaveSessionMessage,
     courseId
   } = data;
-  console.log('data', data)
 
   const [courseOverview, setCourseOverview] = useState('');
 
   useEffect(() => {
-    console.log('CourseCardDetails useEffect courseId', courseId)
     if (courseId) {
       const fetchCourseDetails = async () => {
         try {
           const baseUrl = getConfig().LMS_BASE_URL;
-          console.log('baseUrl', baseUrl)
           const url = `${baseUrl}/api/courses/v1/courses/${courseId}`;
-          console.log('url', url)
-          
+
           const response = await axios.get(url);
-          console.log('Course details:', response.data);
           setCourseOverview(response.data.short_description);
         } catch (error) {
-          console.error('Error fetching course details:', error);
         }
       };
 
@@ -49,10 +43,7 @@ export const CourseCardDetails = ({ cardId }) => {
 
   return (
     <span className="small" data-testid="CourseCardDetails">
-      <span dangerouslySetInnerHTML={{ __html: courseOverview }} />
-      {!(isEntitlement && !isFulfilled) && accessMessage && (
-        ` • ${accessMessage}`
-      )}
+      <span className='course-description' dangerouslySetInnerHTML={{ __html: courseOverview }} />
       {isEntitlement && isFulfilled && canChange ? (
         <>
           {' • '}

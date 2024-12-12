@@ -3,3 +3,11 @@
 a.course-card-title {
   color: $black;
 }
+
+.course-description {
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
